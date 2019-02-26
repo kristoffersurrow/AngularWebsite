@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent} from '../app.component'
-import { Users } from '../models/users';
+import { AppComponent} from '../app.component';
+import { AuthenticationService } from '../services/authentication.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 
 
@@ -15,7 +18,7 @@ export class NavComponent implements OnInit {
   appTitle:string = 'KristofferSurrow.dk';
 
   constructor(
-    private appComponent:AppComponent
+    private appComponent:AppComponent, private authService:AuthenticationService, private breakpointObserver: BreakpointObserver
   ) {  }
 
   ngOnInit() {
@@ -24,5 +27,10 @@ export class NavComponent implements OnInit {
   logout(){
     this.appComponent.logout();
   }
+
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches)
+  );
 
 }

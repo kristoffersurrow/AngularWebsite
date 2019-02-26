@@ -13,6 +13,13 @@
     margin:auto;
 }
 
+@media (max-width:750px){
+    .form-container{
+        width:400px;
+        padding: 3.5em 0 3.5em 0;
+    }
+}
+
 .form-group {
     padding: 15px;
 }

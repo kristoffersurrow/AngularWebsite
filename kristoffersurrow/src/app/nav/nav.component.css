@@ -5,10 +5,22 @@ header {
         font-weight: bold;
         font-size: 15px;
     }
+    .logo:hover{
+        background-color:rgb(78, 78, 78);
+    }
+
+    .burger{
+        color: #F5FFFF;
+    }
+
+    mat-menu{
+        width:100%;
+    }
 
     nav {
         justify-self: right;
         padding: 12.8px;
+
     } 
         ul {
             list-style-type: none;

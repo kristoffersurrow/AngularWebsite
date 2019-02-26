@@ -34,3 +34,15 @@ section {
     margin: 0 auto;
     padding: 2em;
 }
+
+@media (max-width:750px){
+    section{
+        padding-left:0px;
+        padding-right:0px;
+        width:100%;
+        margin:auto;
+    }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

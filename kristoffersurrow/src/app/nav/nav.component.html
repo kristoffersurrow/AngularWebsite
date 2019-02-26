@@ -1,12 +1,28 @@
 <header>
 <div class="container">
+  
   <a routerLink="/home" class="logo">{{appTitle}}</a>
-  <nav>
-    <ul>
+  <nav class="">
+
+    <div class="" id="">
+
+    <button mat-button *ngIf="isHandset$ | async" [matMenuTriggerFor]="menu">
+      <mat-icon class="burger" aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item routerLink="/home">Forside</button>
+        <button mat-menu-item routerLink="/login" (click)="logout()">Log ud</button>
+    </mat-menu>
+
+
+    <ul *ngIf="!(isHandset$ | async)">
       <li><a routerLink="/home">Forside</a></li>
       <li><a routerLink="/user">Min side</a></li>
-      <li><a routerLink="/login" (click)="logout">Log ud</a></li>
+      <li><a routerLink="/login" (click)="logout()">Log ud</a></li>
     </ul>
+
+    </div>
   </nav>
 </div>
 </header>

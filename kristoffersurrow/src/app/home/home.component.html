@@ -10,10 +10,10 @@
         <p>{{ grocery.name }}</p>
       </div>
       <div class="flex-item">  
-        <input type="checkbox" [checked]="grocery.checkmark" (click)="updateItem(grocery.id,grocery)"/>
+        <mat-checkbox [checked]="grocery.checkmark" (click)="updateItem(grocery.id,grocery)"></mat-checkbox>
       </div>
       <div class="flex-item">
-        <button (click)="deleteItem(grocery.id)">Slet</button>
+        <button mat-button (click)="deleteItem(grocery.id)">Slet</button>
       </div>
 
     </div>
@@ -25,10 +25,10 @@
         <p *ngIf="noText" class="error_text">Ikke udfyldt</p>
       </div>
       <div class="flex-item">
-        <input [(ngModel)]="newGrocery.checkmark" type="checkbox"/>
+        <mat-checkbox [(ngModel)]="newGrocery.checkmark"></mat-checkbox>
       </div>
       <div class="flex-item">
-        <button (click)="addItem('Kartofler',true)" >Indsend ny vare</button>
+        <button mat-button (click)="addItem()" >Indsend ny vare</button>
       </div>
       
     </div> 

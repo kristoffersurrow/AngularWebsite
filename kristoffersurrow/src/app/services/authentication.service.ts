@@ -23,8 +23,8 @@ export class AuthenticationService {
         return this.currentUserSubject.value;
     }
 
-    login(username:string, pw:string) {
-        let user:Users = new Users(username,pw);
+    login(username:string, password:string) {
+        let user:Users = new Users(username,password);
 
         return this.http.post<any>(this.apiURL,JSON.stringify(user),{headers: {'Content-Type': 'application/json'} })
             .pipe(map(user => {
