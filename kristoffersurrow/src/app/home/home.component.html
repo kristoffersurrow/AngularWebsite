@@ -1,36 +1,6 @@
-<h1 *ngIf='groceries'>Indkøbsliste</h1>
-<h1 *ngIf='!groceries'>Ingen forbindelse til serveren</h1>
-
-<!--denne ul bliver kun "lavet" hvis groceries ikke er null-->
-<ul *ngIf="groceries">
-  <!--for loop-->
-  <li *ngFor="let grocery of groceries">
-    <div id="flex-container">
-      <div class="flex-item">
-        <p>{{ grocery.name }}</p>
-      </div>
-      <div class="flex-item">  
-        <mat-checkbox [checked]="grocery.checkmark" (click)="updateItem(grocery.id,grocery)"></mat-checkbox>
-      </div>
-      <div class="flex-item">
-        <button mat-button (click)="deleteItem(grocery.id)">Slet</button>
-      </div>
-
-    </div>
-  </li>
-  <li>
-     <div id="flex-container">
-      <div class="flex-item">
-        <p><input [(ngModel)]="newGrocery.name" id="input" type="text"/></p>
-        <p *ngIf="noText" class="error_text">Ikke udfyldt</p>
-      </div>
-      <div class="flex-item">
-        <mat-checkbox [(ngModel)]="newGrocery.checkmark"></mat-checkbox>
-      </div>
-      <div class="flex-item">
-        <button mat-button (click)="addItem()" >Indsend ny vare</button>
-      </div>
-      
-    </div> 
-  </li>
-</ul>
+<app-front></app-front>
+<app-myprojects></app-myprojects>
+<app-skills></app-skills>
+<app-about></app-about>
+<app-workwithme></app-workwithme>
+<app-contact></app-contact>

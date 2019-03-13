@@ -1,0 +1,98 @@
+<section id="projects-section">
+
+  <div class="section-header">
+    <h1>Mine Seneste Projekter</h1>
+    <hr>
+    <h2>Klik på et projekt for at se mere</h2>
+    <br/>
+  </div>
+
+  <div class="section-body animated fadeIn slower">
+    <div class="grid-container">
+      
+      <div (click)="scroll(output)" class="grid-item item1">
+        <a routerLink="/projects/angular">
+        <div class="image-div angular">
+        </div>
+        <div>
+          <h3>Angular Front-end</h3>
+          <p>Angular hjemmeside der kommunikerer med min backend REST API (fra Indkøbsliste) til login og præsentation af listen</p>
+        </div>
+      </a>
+      </div>
+
+      <div (click)="scroll(output)" class="grid-item item2">
+        <a routerLink="/projects/indkoeb">
+        <div class="image-div indkoebsliste">
+        </div>
+        <div>
+          <h3>Indkøbsliste</h3>
+          <p>.NET Core RESTful Web API, 
+            der returnerer en indkøbsliste fra en MSSQL database gennem brug af Entity Framework. 
+            Controlleren testes med et Mock Repository</p>
+        </div>
+        </a>
+      </div>
+
+
+      <div (click)="scroll(output)" class="grid-item item3">
+          <a routerLink="/projects/smartpizza">
+        <div class="image-div smartpizza">
+        </div>
+        <div>
+          <h3>SmartPizza</h3>
+          <p>WPF app der bruger Design patterns (Factory- og Decorator pattern), til at lave pizza</p>
+        </div>
+        </a>
+      </div>
+
+      <div (click)="scroll(output)" class="grid-item item4">
+          <a routerLink="/projects/nettop">
+        <div class="image-div moensterguide">
+        </div>
+        <div>
+          <h3>NettoP - Mønsterguide</h3>
+          <p>Website for Netto Perforering, med "mønsterguide" lavet i JavaScript og PHP</p>
+        </div>
+        </a>
+      </div>
+
+      <div (click)="scroll(output)" class="grid-item item5">
+          <a routerLink="/projects/shoppingcart">
+        <div class="image-div shoppingcart">
+        </div>
+        <div>
+          <h3>React - Indkøbskurv</h3>
+          <p>React projekt, der repræsenterer funktioner fra en online indkøbskurv</p>
+        </div>
+        </a>
+      </div>
+
+      <div (click)="scroll(output)" class="grid-item item6">
+          <a routerLink="/projects/skillslist">
+        <div class="image-div first-vue-app">
+        </div>
+        <div>
+          <h3>Vue - Skillsliste</h3>
+          <p>Vue projekt, hvor man kan tilføje sine skills til en liste, med samme funktion som i en chat-app</p>
+        </div>
+        </a>
+      </div>
+      </div>
+  </div>
+
+</section>
+
+<div class="spacer"></div>
+<div class="spacer-small"></div>
+<hr>
+<div class="spacer"></div>
+<div class="spacer-small"></div>
+
+
+<section #output>
+
+  <router-outlet></router-outlet>
+
+</section>
+

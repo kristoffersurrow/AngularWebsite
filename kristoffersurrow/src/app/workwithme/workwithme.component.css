@@ -1,0 +1,45 @@
+::ng-deep .fa-work{
+    font-size: 50px !important;
+    padding: 10px;
+    color: #BE2A36;
+}
+
+section.white-bg{
+    background: whitesmoke;
+    margin: 0;
+    padding: 5%;
+
+}
+
+h3{
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+li{
+    padding: 5px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+.grid-item{
+    min-height: 200px;
+    max-width: 300px;
+    text-align: center;
+}
+
+@media (max-width:750px){
+    .grid-container{
+        grid-template-columns: auto;
+    }
+}

@@ -1,24 +1,26 @@
 <header>
 <div class="container">
   
-  <a routerLink="/home" class="logo">{{appTitle}}</a>
-  <nav class="">
+  <a routerLink="/home" class="logo animated slideInRight">{{appTitle}}</a>
+  <nav class="animated slideInRight">
 
-    <div class="" id="">
+    <div class="nav-holder">
 
     <button mat-button *ngIf="isHandset$ | async" [matMenuTriggerFor]="menu">
       <mat-icon class="burger" aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
 
-    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <mat-menu #menu="matMenu" style="min-width: 375px" [overlapTrigger]="false">
         <button mat-menu-item routerLink="/home">Forside</button>
+        <button mat-menu-item routerLink="/projects">Projekter</button>
+        <button mat-menu-item routerLink="/user">Om mig</button>
         <button mat-menu-item routerLink="/login" (click)="logout()">Log ud</button>
     </mat-menu>
 
-
     <ul *ngIf="!(isHandset$ | async)">
       <li><a routerLink="/home">Forside</a></li>
-      <li><a routerLink="/user">Min side</a></li>
+      <li><a routerLink="/projects">Projekter</a></li>
+      <li><a routerLink="/user">Om mig</a></li>
       <li><a routerLink="/login" (click)="logout()">Log ud</a></li>
     </ul>
 

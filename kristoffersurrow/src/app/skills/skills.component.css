@@ -1,0 +1,43 @@
+::ng-deep .fa-skill{
+    font-size: 50px !important;
+    padding: 10px;
+    color: rgba(1, 25, 240, 0.575);
+}
+
+section.white-bg{
+    background: whitesmoke;
+    margin: 0;
+    padding: 5%;
+
+}
+
+h3{
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+li{
+    padding: 5px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.grid-item{
+    min-height: 200px;
+}
+
+@media (max-width:750px){
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
+}

@@ -1,0 +1,78 @@
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.grid-item{
+    min-height: 200px;
+    max-width: 500px;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+
+}
+
+.image-div{
+    min-height: 250px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: initial;
+    border: 2px solid black;
+}
+
+a{
+    color:black;
+}
+
+p {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+h3{
+    padding: 10px;
+    margin: 0;
+}
+
+.output-section{
+    min-height: 1000px;;
+}
+
+.indkoebsliste{
+    background-image: url("../../images/Indkoebsliste.png");
+}
+
+.angular{
+    background-image: url("../../images/Angular.png");
+}
+
+.smartpizza{
+    background-image: url("../../images/Smartpizza.png");
+}
+
+.moensterguide{
+    background-image: url("../../images/moensterguide.png");
+}
+
+.shoppingcart{
+    background-image: url("../../images/ShoppingCart.png");
+}
+
+.first-vue-app{
+    background-image: url("../../images/First-Vue-App.png");
+}
+
+@media (max-width:1000px){
+.grid-container{
+    grid-template-columns: auto auto;
+}
+}
+
+@media (max-width:500px){
+    .grid-container{
+        grid-template-columns: auto;
+    }
+}

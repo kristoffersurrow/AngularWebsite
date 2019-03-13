@@ -1,0 +1,41 @@
+.myprojects{
+    height: 800px;
+    max-width: 1000px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-image: url("../../images/projects.png");
+    background-color: #E2E4E6;
+    text-align: center;
+    margin: auto;
+}
+
+.myprojects button{
+    font-size: 20px;
+    width: 90%;
+    height: 60px;
+    border: 0;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 25%;
+    
+}
+
+
+
+::ng-deep .fa-chevron{
+    float: right;
+    padding-right: 20px;
+}
+
+@media (max-width:1000px){
+    .myprojects{
+        height: 600px;
+    }
+}
+
+@media (max-width:500px){
+    .myprojects{
+        height: 300px;
+    }
+}

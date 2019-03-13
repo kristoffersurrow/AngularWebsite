@@ -10,7 +10,7 @@
     background:white;
     padding:3.5em;
     width:500px;
-    margin:auto;
+    margin:100px auto 0 auto;
 }
 
 @media (max-width:750px){
@@ -35,10 +35,6 @@
     margin-right: auto;
 }
 
-.loader{
-    background: url("src\images\loading.gif") no-repeat;
-    background-position: center;
-}
 
 .btn {
     background: gray;

@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
       }
 
       this.loading = true;
-      
+         
       this.authenticationService.login(this.f.username.value, this.f.password.value)
         .pipe(first())
         .subscribe(
@@ -68,6 +68,8 @@ export class LoginComponent implements OnInit {
   noLogin(){
 
     alert('Husk at denne hjemmeside KUN er ment til fremvisning! \nGod fornøjelse!');
+
+    this.loading = true;
 
     this.authenticationService.login("Uden", "1234")
     .pipe(first())

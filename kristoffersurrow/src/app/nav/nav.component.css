@@ -1,5 +1,10 @@
 header {
     background:rgb(78, 78, 78);
+    height: 90px;
+}
+
+a {
+    color: white;
 }
     .logo {
         font-weight: bold;
@@ -11,23 +16,36 @@ header {
 
     .burger{
         color: #F5FFFF;
+        padding: 10px;
     }
 
-    mat-menu{
-        width:100%;
+    ::ng-deep .mat-menu-panel {
+        top: 90px !important;
+        left: 0px !important;
+        max-width: none!important;
+        min-width: 100vw !important;
+      }
+
+    ::ng-deep .cdk-overlay-pane {
+    top: 90px !important;
+    left: 0px !important;
     }
 
     nav {
         justify-self: right;
-        padding: 12.8px;
+        /* padding: 12.8px; */
 
     } 
+
+    .nav-holder{
+
+    }
         ul {
             list-style-type: none;
-            margin: 0; padding: 0;
+            padding: 0;
         }
-            li {
-                float: left;
+        li {
+            float: left;
             }
                 a {
                     padding: 1em;

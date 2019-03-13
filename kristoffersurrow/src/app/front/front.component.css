@@ -1,0 +1,29 @@
+
+.landing-image{
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: initial;
+    background-image: url("../../images/notebook-bg.jpg");
+    width: 100%;
+    height: calc(100vh - 90px);
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+
+.holder{
+    display: inline-block;
+    margin: 100px auto 0 auto;
+}
+
+.holder h1{
+    font-size: 30px;
+    color: black;
+}
+
+.holder button{
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+}

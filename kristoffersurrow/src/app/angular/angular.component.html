@@ -1,0 +1,45 @@
+  
+  <div class="section-header">
+    <h1 *ngIf='groceries'>Angular Front-end</h1>
+    <hr>
+    <div *ngIf='!groceries' class="loader"></div>
+  </div>
+  
+  <div class="container-div">
+    
+    <!--denne ul bliver kun "lavet" hvis groceries ikke er null-->
+    <ul *ngIf="groceries">
+      <!--for loop-->
+      <li *ngFor="let grocery of groceries">
+        <div id="flex-container">
+          <div class="flex-item">
+            <p>{{ grocery.name }}</p>
+          </div>
+          <div class="flex-item">  
+            <mat-checkbox [checked]="grocery.checkmark" (click)="updateItem(grocery.id,grocery)"></mat-checkbox>
+          </div>
+          <div class="flex-item">
+            <button mat-button (click)="deleteItem(grocery.id)">Slet</button>
+          </div>
+          
+        </div>
+      </li>
+      <li>
+        <div id="flex-container">
+          <div class="flex-item">
+            <p><input [(ngModel)]="newGrocery.name" (focusout)=checkInput() id="input" type="text"/></p>
+            <p *ngIf="noText" class="error_text">Ikke udfyldt</p>
+          </div>
+          <div class="flex-item">
+            <mat-checkbox [(ngModel)]="newGrocery.checkmark"></mat-checkbox>
+          </div>
+          <div class="flex-item">
+            <button mat-button (click)="addItem()" >Send</button>
+          </div>
+          
+        </div> 
+      </li>
+    </ul>
+  </div>
+  <div class="spacer"></div>
+

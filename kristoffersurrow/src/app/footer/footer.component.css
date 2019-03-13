@@ -1,0 +1,55 @@
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+}
+
+.grid-item{
+    width: 100%;
+    max-width: 500px;
+
+}
+
+a{
+    color: white;
+}
+
+.footer{
+    background-color: #464646;
+    color: white;
+    height: 70px;
+    width: 100%;
+
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: center;
+}
+
+.right fa{
+    vertical-align: middle;
+    display: inline-block;
+
+}
+
+::ng-deep .contact{
+    font-size: 30px;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    margin: 5px 20px 5px 20px;
+    border: solid 2px #464646;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+::ng-deep .contact:hover{
+    border-color: white;
+}
